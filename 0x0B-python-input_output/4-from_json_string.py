@@ -1,12 +1,11 @@
 #!/usr/bin/python3
-"""append_write
+"""from_json_string
 """
+import json
 
 
-def append_write(filename="", text=""):
-    """Takes in str filename to write to, and str text to append to file
+def from_json_string(my_str):
+    """Returns a python object represented by a JSON string
     """
 
-    with open(filename, mode="a", encoding="utf-8") as appendFile:
-        appendFile.write(text)
-        return len(text)
+    return json.loads(my_str)
