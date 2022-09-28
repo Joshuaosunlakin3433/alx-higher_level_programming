@@ -1,11 +1,12 @@
 #!/usr/bin/python3
-"""
-function that writes a string to a text file (UTF8) and returns the number of characters written
+"""write_file
 """
 
 
 def write_file(filename="", text=""):
-    """ module write_file
+    """Takes str filename to read, and str text to write to
     """
-    with open(filename, 'w') as f:
-        return f.write(text)
+
+    with open(filename, mode="w", encoding="utf-8") as writeFile:
+        writeFile.write(text)
+        return len(text)
